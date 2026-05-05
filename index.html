@@ -20,6 +20,7 @@
                 <div class="envelope-body">
                     <div class="letter">
                         <span class="letter-icon">💌</span>
+                        <h3 class="dynamic-guest-name" style="font-family: var(--font-names); color: var(--secondary-color); font-size: 2.2rem; margin-bottom: 5px; text-shadow: none;">Dear Guest,</h3>
                         <p class="letter-text">You're Invited</p>
                     </div>
                 </div>
@@ -330,72 +331,6 @@
             </div>
         </section>
 
-        <!-- RSVP Section -->
-        <section id="rsvp" class="section rsvp-section">
-            <div class="container">
-                <h2 class="section-title animate-on-scroll">
-                    <span class="title-decorative">Respond</span>
-                    <span class="title-main">RSVP</span>
-                </h2>
-                <p class="rsvp-subtitle animate-on-scroll">We would be honored by your presence.<br>Kindly confirm your attendance.</p>
-                <form id="rsvpForm" class="rsvp-form animate-on-scroll">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="guestName">Your Name</label>
-                            <input type="text" id="guestName" placeholder="Enter your full name" required>
-                            <div class="input-glow"></div>
-                        </div>
-                        <div class="form-group">
-                            <label for="guestPhone">Phone Number</label>
-                            <input type="tel" id="guestPhone" placeholder="+91 XXXXX XXXXX" required>
-                            <div class="input-glow"></div>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="guestCount">Number of Guests</label>
-                            <select id="guestCount" required>
-                                <option value="">Select</option>
-                                <option value="1">1 Guest</option>
-                                <option value="2">2 Guests</option>
-                                <option value="3">3 Guests</option>
-                                <option value="4">4 Guests</option>
-                                <option value="5">5+ Guests</option>
-                            </select>
-                            <div class="input-glow"></div>
-                        </div>
-                        <div class="form-group">
-                            <label for="attendance">Will You Attend?</label>
-                            <select id="attendance" required>
-                                <option value="">Select</option>
-                                <option value="yes">Happily Attending 🎉</option>
-                                <option value="maybe">Maybe 🤔</option>
-                                <option value="no">Sorry, Can't Make It 😢</option>
-                            </select>
-                            <div class="input-glow"></div>
-                        </div>
-                    </div>
-                    <div class="form-group full-width">
-                        <label for="guestMessage">Your Blessings</label>
-                        <textarea id="guestMessage" placeholder="Write your warm wishes for the couple..." rows="4"></textarea>
-                        <div class="input-glow"></div>
-                    </div>
-                    <button type="submit" class="rsvp-submit-btn" id="rsvpSubmitBtn">
-                        <span class="btn-content">
-                            <span>Send Your Wishes</span>
-                            <span class="btn-icon">💌</span>
-                        </span>
-                        <span class="btn-shimmer"></span>
-                    </button>
-                </form>
-                <div id="rsvpSuccess" class="rsvp-success hidden">
-                    <div class="success-icon">✅</div>
-                    <h3>Thank You!</h3>
-                    <p>Your RSVP has been received. We look forward to celebrating with you!</p>
-                </div>
-            </div>
-        </section>
-
         <!-- Wishes Wall Section -->
         <section id="wishes" class="section wishes-section">
             <div class="section-bg-pattern"></div>
@@ -463,7 +398,7 @@
         <a href="#events" class="nav-dot" title="Events"><span></span></a>
         <a href="#gallery" class="nav-dot" title="Gallery"><span></span></a>
         <a href="#venue" class="nav-dot" title="Venue"><span></span></a>
-        <a href="#rsvp" class="nav-dot" title="RSVP"><span></span></a>
+        
         <a href="#wishes" class="nav-dot" title="Wishes"><span></span></a>
     </nav>
 

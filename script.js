@@ -124,28 +124,16 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById("countSeconds").querySelector('.countdown-number').innerText = seconds.toString().padStart(2, '0');
     }, 1000);
 
-    // --- RSVP Form ---
-    const rsvpForm = document.getElementById('rsvpForm');
-    const rsvpSuccess = document.getElementById('rsvpSuccess');
-    const rsvpSubmitBtn = document.getElementById('rsvpSubmitBtn');
-
-    rsvpForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        
-        // Change button state
-        const originalContent = rsvpSubmitBtn.innerHTML;
-        rsvpSubmitBtn.innerHTML = '<span class="btn-content">Sending...</span>';
-        rsvpSubmitBtn.disabled = true;
-
-        // Simulate API call
-        setTimeout(() => {
-            rsvpForm.style.display = 'none';
-            rsvpSuccess.classList.remove('hidden');
-            
-            // Optional: Create falling hearts or confetti effect here
-            createConfetti();
-        }, 1500);
-    });
+    // --- Guest Name from URL ---
+    const urlParams = new URLSearchParams(window.location.search);
+    const guestName = urlParams.get('guest');
+    const guestDisplayElements = document.querySelectorAll('.dynamic-guest-name');
+    
+    if(guestName && guestName.trim() !== '') {
+        guestDisplayElements.forEach(el => {
+            el.innerText = 'Dear ' + guestName + ',';
+        });
+    }
 
     // --- Particle Background Effect ---
     const canvas = document.getElementById('particleCanvas');
