@@ -662,31 +662,33 @@ h1, h2, h3, h4, h5, h6 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: var(--secondary-color);
-    font-size: 3rem;
     transition: var(--trans-smooth);
-    background: rgba(26, 42, 58, 0.05);
+    background: linear-gradient(to top, rgba(26, 42, 58, 0.95), transparent);
+    opacity: 0;
 }
 
 .gallery-placeholder p {
-    font-size: 1.2rem;
-    margin-top: 10px;
-    font-family: var(--font-accent);
-    color: var(--text-main);
-    opacity: 0;
-    transform: translateY(20px);
+    font-size: 2.2rem;
+    font-family: var(--font-names);
+    color: var(--secondary-color);
+    transform: translateY(30px);
     transition: var(--trans-smooth);
+    text-shadow: 0 4px 10px rgba(0,0,0,0.8);
+    letter-spacing: 2px;
 }
 
 .gallery-item:hover .gallery-placeholder {
-    background: rgba(26, 42, 58, 0.8);
-    color: #fff;
+    opacity: 1;
 }
 
 .gallery-item:hover .gallery-placeholder p {
-    opacity: 1;
-    transform: translateY(0);
-    color: #fff;
+    font-size: 2.2rem;
+    font-family: var(--font-names);
+    color: var(--secondary-color);
+    transform: translateY(30px);
+    transition: var(--trans-smooth);
+    text-shadow: 0 4px 10px rgba(0,0,0,0.8);
+    letter-spacing: 2px;
 }
 
 /* =========================================
